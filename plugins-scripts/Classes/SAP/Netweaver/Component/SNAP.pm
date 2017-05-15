@@ -145,12 +145,12 @@ sub init {
             printf "ASCII_NOTIFICATION_END\n-->\n";
           }
           if ($self->opts->report eq "ascii") {
-            if ($self->mode =~ /server::snap::shortdumps::count/) {
+            if ($self->mode =~ /netweaver::snap::shortdumps::count/) {
               @titles = qw(datum uzeit ahost uname mandt error program);
               foreach my $shortdump (@shortdumps) {
                 push(@{$table}, [map { [$shortdump->{$_}, 2] } @titles]);
               }
-            } elsif ($self->mode =~ /server::snap::shortdumps::recurrence/) {
+            } elsif ($self->mode =~ /netweaver::snap::shortdumps::recurrence/) {
               @titles = qw(count ahost uname mandt error program);
               foreach my $unique_dump (map { 
                   $unique_dumps->{$_}
