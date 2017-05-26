@@ -120,7 +120,7 @@ sub check {
     } elsif ($self->{STATYP} eq "W") {
       $self->add_warning();
     } elsif ($self->{STATYP} eq "E") {
-      $self->add_critical();
+      $self->add_warning();
     } elsif ($self->{STATYP} eq "S") {
       $self->add_ok();
     } elsif ($self->{STATYP} eq "I") {
